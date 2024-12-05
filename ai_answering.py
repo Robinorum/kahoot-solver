@@ -69,7 +69,7 @@ def send_to_chatgpt(question, extracted_answers):
 
     # Utiliser l'API OpenAI pour envoyer le prompt
     try:
-        openai.api_key = "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"
+        openai.api_key = ""
         
         reponse = openai.chat.completions.create(
             messages=[{
