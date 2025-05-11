@@ -4,7 +4,7 @@ import shutil
 from pathlib import Path
 
 # 🔧 À adapter si besoin
-dataset_dir = Path("dataset_kahoot/")  # ex: Path("dataset/")
+dataset_dir = Path("../dataset_kahoot/")  # ex: Path("dataset/")
 images_dir = dataset_dir / "images"
 labels_dir = dataset_dir / "labels"
 
