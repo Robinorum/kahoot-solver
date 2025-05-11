@@ -1,0 +1,18 @@
+Exécutez la commande suivante pour installer les dépendances :
+
+pip install -r requirements.txt
+
+
+
+
+
+Remarque
+
+IL FAUT QUE VOUS TELECHARGER TESSERACT : 
+Assurez-vous que Tesseract-OCR est correctement installé sur le système pour que pytesseract fonctionne. Vous pouvez vérifier son installation avec :
+
+Windows : Ajoutez le chemin de tesseract.exe à votre variable d'environnement PATH.
+Linux/Mac : Installez-le via le gestionnaire de paquets (sudo apt install tesseract-ocr sur Ubuntu, par exemple).
+
+
+
