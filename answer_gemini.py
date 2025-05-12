@@ -4,7 +4,7 @@ import os
 import google.generativeai as genai
 
 
-genai.configure(api_key="AIzaSyCOna-_4PARBxIeNVCOQtGQhbxGujl7_i4")
+genai.configure(api_key="")
 
 def extract_text_from_image(image_path):
     image = Image.open(image_path)
