@@ -5,6 +5,9 @@ import keyboard
 from ultralytics import YOLO
 import tempfile
 import os
+from answer_gemini import answer_gemini
+
+
 
 model_path = 'yolov8s_best.pt'
 model = YOLO(model_path)
@@ -21,6 +24,11 @@ def main():
     while True:
         try:
             if keyboard.is_pressed("ctrl+alt+a"):
+
+                if os.path.exists("screenshot"):
+                    for file in os.listdir("screenshot"):
+                        os.remove(os.path.join("screenshot", file))
+
                 screenshot = take_screenshot()
 
                 with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
@@ -38,8 +46,15 @@ def main():
                     cv2.imwrite(f'screenshot/box_{i}.jpg', cropped_box)
 
                 os.remove(tmp_path)
+
+                answer_gemini()
+
+
+
         except KeyboardInterrupt:
             break
+
+
 
 if __name__ == "__main__":
     main()
